@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TempConvert — Convert Temperatures in Seconds</title>
+  <meta name="description" content="TempConvert converts temperatures between Celsius, Fahrenheit, and Kelvin quickly and accurately." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="container navbar">
+      <span class="logo">TempConvert</span>
+      <div class="nav-links">
+        <a href="#converter">Converter</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#about">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <span class="label">SMART TEMPERATURE TOOL</span>
+        <h1>
+          <span class="type-line type-line--1">Convert Temperatures</span>
+          <span class="type-line type-line--2">in Seconds.</span>
+        </h1>
+        <p>Quickly convert Celsius, Fahrenheit, and Kelvin with accurate results and simple input validation.</p>
+      </div>
+    </section>
+    <section id="converter" class="converter">
+      <div class="container">
+        <div class="converter-card">
+          <h2>Temperature Converter</h2>
+
+          <form id="converter-form" novalidate>
+
+            <div class="form-group">
+              <label for="temperature">Enter Temperature</label>
+              <input type="number" id="temperature" step="any" placeholder="e.g. 25" />
+            </div>
+
+            <div class="form-group">
+              <label for="unit">Convert From</label>
+              <select id="unit">
+                <option value="celsius">Celsius (°C)</option>
+                <option value="fahrenheit">Fahrenheit (°F)</option>
+                <option value="kelvin">Kelvin (K)</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn-convert">Convert Temperature</button>
+
+            <p id="error-message" class="error-message" hidden></p>
+
+          </form>
+          <div class="results" id="results" hidden>
+            <h3>Conversion Results</h3>
+            <div class="results-grid">
+
+              <div class="result-card">
+                <span class="result-card__unit">Celsius</span>
+                <span class="result-card__value" id="result-celsius">—</span>
+              </div>
+
+              <div class="result-card">
+                <span class="result-card__unit">Fahrenheit</span>
+                <span class="result-card__value" id="result-fahrenheit">—</span>
+              </div>
+
+              <div class="result-card">
+                <span class="result-card__unit">Kelvin</span>
+                <span class="result-card__value" id="result-kelvin">—</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section id="how-it-works" class="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+
+        <div class="steps">
+          <div class="step">
+            <span class="step__number">01</span>
+            <h3>Enter</h3>
+            <p>Enter your temperature value.</p>
+          </div>
+
+          <div class="step">
+            <span class="step__number">02</span>
+            <h3>Select</h3>
+            <p>Choose Celsius, Fahrenheit, or Kelvin.</p>
+          </div>
+
+          <div class="step">
+            <span class="step__number">03</span>
+            <h3>Convert</h3>
+            <p>Click the button to instantly see all converted values.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="guide">
+      <div class="container">
+        <h2>Temperature Conversion Guide</h2>
+
+        <div class="guide-grid">
+          <div class="guide-card">
+            <span class="guide-card__label">°C → °F</span>
+            <span class="guide-card__formula">(C × 9/5) + 32</span>
+          </div>
+
+          <div class="guide-card">
+            <span class="guide-card__label">°F → °C</span>
+            <span class="guide-card__formula">(F − 32) × 5/9</span>
+          </div>
+
+          <div class="guide-card">
+            <span class="guide-card__label">°C → K</span>
+            <span class="guide-card__formula">C + 273.15</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo">TempConvert</span>
+        <p>Convert temperatures quickly and accurately.</p>
+      </div>
+
+      <div class="footer__links">
+        <a href="#converter">Converter</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#about">About</a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>&copy; 2026 TempConvert. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
