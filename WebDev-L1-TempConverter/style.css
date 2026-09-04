@@ -134,7 +134,7 @@ header {
   background-size: 115%;
   background-position: center;
   opacity: 0.9;
-  animation: bg-drift 16s ease-in-out infinite;
+  animation: bg-drift 30s ease-in-out infinite;
 }
 
 @keyframes bg-drift {
